@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>Flex试验</title>
+    <!-- TemplateEndEditable -->
+    <style>
+        /* 清除默认样式 */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a{
+            text-decoration: none;
+            color:#333
+        }
+
+        li{
+            list-style: none;
+            background-color: #ededed;
+        }
+
+
+        /* 该方法比float好,将页面放大缩小时,不会影响到页面的变化 */
+        .flow{
+            display: flex;
+        }
+        
+        .title{
+            width: 760px;
+            height: 64px;
+            /* margin: 30px auto;*/
+            /* background-color: blue; */
+
+           
+        }
+
+        .search{
+            height: 48px;
+            /* background-color: pink; */
+             /* 背景图 */
+             background-image: url(./素材/imgs/index_top.jpg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+
+        .buttom{
+            height: 18px;
+        }
+
+        .title .search span{
+            padding-left: 500px;
+            padding-right: 20px;
+
+            /* 字体大小 */
+            font-size: 17px;
+            /* 垂直居中 */
+            line-height: 48px;
+        }
+
+        .title .search select{
+            /* 字体大小 */
+            font-size: 17px;
+            /* 垂直居中 */
+            line-height: 48px;
+        }
+
+        .title .buttom table td{
+            width: 760px;
+            background-color: #004194;
+
+            text-align: center;
+            line-height: 20px;
+        }
+		/*这是导航栏区域*/
+		.position{
+			margin-top:8px;
+			width: 760px;
+			height:20px;
+			/* background-color: green; */
+		}
+
+        .position img{
+            border: 3px solid #000;
+            
+        }
+
+        .position p{
+            margin-left: 12px;
+            margin-right: 20px;
+            display: inline-block;
+            color: #333;
+            
+            line-height: 20px;
+        }
+
+        .position span{
+            font-weight: 700;
+            color: #333;
+        }
+
+		/*这是侧边栏区域*/
+		.sidebar{
+			width:144px;
+			height: 294px;
+            margin-top: 5px;
+			/* background-color: orange; */
+
+
+		}
+
+        .sidebar .li1{
+            padding-left: 30px;
+            margin-top: -5px;
+            background-image: url(./素材/imgs/icon2.jpg);
+            background-repeat: no-repeat;
+            background-position: 12px center;
+
+        }
+
+        .sidebar .li2{
+            padding-left: 30px;
+
+            background-image: url(./素材/contact/imgs/icon1.jpg);
+            background-repeat: no-repeat;
+            background-position: 12px center;
+
+        }
+
+        .sidebar .li3{
+            padding-left: 30px;
+
+            background-image: url(./素材/imgs/icon2.jpg);
+            background-repeat: no-repeat;
+            background-position: 12px center;
+
+        }
+		
+		/*这是主要内容区域*/
+		.mainarea{
+			width: 610px;
+			height: 294px;
+            margin-top: 5px;
+		}
+
+        .mainarea table{
+            margin-top: -3px;
+            text-align: center;
+        }
+
+        .mainarea table td{
+            background-color: #d8dfef;
+        }
+
+        .mainarea table  textarea{
+            resize:none;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    </style>
+<!-- TemplateBeginEditable name="head" -->
+	
+<!-- TemplateEndEditable -->
+</head>
+<body>
+    <div class="all">
+        <div class="title">
+            <div class="search">
+                <span>产品搜索:</span>
+                <select name="" id="">
+                    <option disabled selected>请选择你的产品</option>
+                    <option value="">产品一</option>
+                    <option value="">产品二</option>
+                    <option value="">产品三</option>
+                </select>
+            </div>
+            <div class="buttom">
+                <table>
+                    <tr>
+                        <td>首页</td>
+                        <td>产品介绍</td>
+                        <td>解决方案</td>
+                        <td>成功案例</td>
+                        <td>服务支持</td>
+                        <td>销售代理</td>
+                        <td>联系我们</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="position">
+        <!-- TemplateBeginEditable name="positionContent" -->
+            <p>您现在所在的位置：</p> 
+            <span >首页</span>
+            <img src="./素材/cases/imgs/arrow.gif" alt="">
+            <a href="#">联系我们</a>
+    
+        <!-- TemplateEndEditable -->
+            </div>
+        
+
+        <div class="flow">
+                
+        <div class="sidebar">
+            <!-- TemplateBeginEditable name="sidebarContent" -->
+                <img src="./素材/imgs/company1.gif" alt="">
+                <li class="li1">公司简介</li>
+                <li class="li2">联系我们</li>
+                <li class="li3">市场动态</li>
+            <!-- TemplateEndEditable -->
+                </div>
+            
+            <div class="mainarea">
+            <!-- TemplateBeginEditable name="mainContent" -->
+                <img src="./素材/contact/imgs/title3.gif" alt="">
+                <table   >
+                    <!-- 第一行 -->
+                    <tr>
+                        <th colspan="2" style="padding: 0; margin: 0;">
+                            <img src="./素材/contact/imgs/contact.gif" style="width: 100%; height: 100%; ">
+                        </th>
+                        
+                    </tr>
+                    <!-- 第二行 -->
+                    <tr class="td1" >
+                        <td class="td1">公司名称</td>
+                        <td align="left"> <input type="text" name="company" style="width: 300px;" maxlength="50"> </td>
+                    </tr>
+                    <!-- 第三行 -->
+                    <tr class="td1">
+                        <td > 姓名</td>
+                        <td align="left">  <input type="text" name="name" style="width: 100px;" maxlength="8"> </td>
+                    </tr>
+                    <!-- 第四行 -->
+                    <tr class="td1">
+                        <td>E-mail</td>
+                        <td align="left">  <input type="text" name="email" style="width: 200px;" maxlength="20"> </td>
+                    </tr>
+                    <!-- 第五行 -->
+                    <tr class="td1">
+                        <td>联系电话</td>
+                        <td align="left">  <input type="text" name="telephone" style="width: 130px;" maxlength="12"> </td>
+                    </tr>
+                    <!-- 第六行 -->
+                    <tr class="td1">
+                        <td>留言内容</td>
+                        <td align="left"> <textarea rows="5" cols="45"></textarea>   </td>
+                        
+                    </tr>
+                    <!-- 第七行 -->
+                    <tr height="30px" align="left">
+                        <td colspan="2"> <input type="submit"> <input type="reset"></td>
+                       
+                    </tr>
+                </table>
+            <!-- TemplateEndEditable -->
+                </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
